@@ -1,8 +1,7 @@
-__author__ = 'oleksi.iisakov'
+__author__ = 'oleksi.isakov'
 
 
-
-@pytest.fixture
+@pytest.fixture(scope = 'session')
 def app(request):
     fixture = Application()
     request.addfinalizer(fixture.destroy)
