@@ -32,6 +32,4 @@ pip-delete-this-directory.txt
 
 # Pycharm
 .idea/
-.idea/misc.xml
-.idea/py4qa.iml
-.idea/workspace.xml
+
