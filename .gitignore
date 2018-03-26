@@ -35,3 +35,5 @@ pip-delete-this-directory.txt
 
 .idea/py4qa.iml
 .idea/workspace.xml
+.idea/py4qa.iml
+.idea/workspace.xml
