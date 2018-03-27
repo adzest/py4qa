@@ -40,3 +40,6 @@ pip-delete-this-directory.txt
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml
+test/geckodriver.log
+test/geckodriver.log
+test/geckodriver.log
