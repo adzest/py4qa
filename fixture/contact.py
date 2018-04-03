@@ -64,14 +64,13 @@ class ContactHelper:
         except NoSuchElementException:
             wd.find_element_by_link_text('home').click()
 
-    def modify_first_group(self, new_group_data):
+    def modify_first_contact(self, new_contact_data):
         wd = self.app.wd
-        self.open_add_new_contact_page()
         self.select_first_contact()
         # open modification form
-        wd.find_element_by_name('edit').click()
+        wd.find_element_by_xpath('//a[@href="edit.php?id=13"]').click()
         # fill group form
-        self.fill_contact_form(new_group_data)
+        self.fill_contact_form(new_contact_data)
         # submit modification
         wd.find_element_by_name('update').click()
         self.return_to_home_page()
