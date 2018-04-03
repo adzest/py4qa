@@ -1,3 +1,8 @@
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+
 class ContactHelper:
 
     def __init__(self, app):
@@ -27,26 +32,42 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    def delete_first_group(self):
+    def delete_first_contact(self):
         wd = self.app.wd
-        self.open_add_new_contact_page()
-        self.select_first_group()
+        self.select_first_contact()
         # submit deletion
-        wd.find_element_by_name('delete').click()
+        wd.find_element_by_xpath('//input[@value="Delete"]').click()
+        self.accept_if_alert_present()
         self.return_to_home_page()
 
-    def select_first_group(self):
+    def accept_if_alert_present(self):
+        wd = self.app.wd
+        try:
+            WebDriverWait(wd, 3).until(EC.alert_is_present(),
+                                       'Timed out waiting for PA creation ' +
+                                       'confirmation popup to appear.')
+
+            alert = wd.switch_to.alert
+            alert.accept()
+            print('alert accepted')
+        except TimeoutException:
+            print ('no alert')
+
+    def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name('selected[]').click()
 
     def return_to_home_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text('home page').click()
+        try:
+            wd.find_element_by_link_text('home page').click()
+        except NoSuchElementException:
+            wd.find_element_by_link_text('home').click()
 
     def modify_first_group(self, new_group_data):
         wd = self.app.wd
         self.open_add_new_contact_page()
-        self.select_first_group()
+        self.select_first_contact()
         # open modification form
         wd.find_element_by_name('edit').click()
         # fill group form
@@ -57,5 +78,4 @@ class ContactHelper:
 
     def count(self):
         wd = self.app.wd
-        self.open_add_new_contact_page()
         return len(wd.find_elements_by_name('selected[]'))
