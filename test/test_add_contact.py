@@ -3,8 +3,8 @@ from model.contact import Contact
 
 
 def test_add_contact(app):
-    app.contact.create(Contact(first_name='test_fn'))
+    app.contact.create(Contact(firstname='first_name'))
 
 
 def test_add_empty_contact(app):
-    app.contact.create(Contact(first_name=''))
+    app.contact.create(Contact(firstname=''))
