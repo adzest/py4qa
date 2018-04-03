@@ -1,7 +1,7 @@
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
+from model.contact import Contact
 
 class ContactHelper:
 
@@ -37,7 +37,7 @@ class ContactHelper:
         self.go_to_home_page()
         self.select_first_contact()
         # submit deletion
-        wd.find_element_by_xpath('//div/input[@value="Delete"]').click()
+        wd.find_element_by_xpath('//input[@value="Delete"]').click()
         self.accept_if_alert_present()
         self.go_to_home_page()
 
@@ -80,3 +80,12 @@ class ContactHelper:
     def count(self):
         wd = self.app.wd
         return len(wd.find_elements_by_name('selected[]'))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.go_to_home_page()
+        contact_list = []
+        for element in wd.find_elements_by_xpath('//tr[@name="entry"]'):
+            str_id = element.find_element_by_name('selected[]').get_attribute('value')
+            contact_list.append(Contact(id=str_id))
+        return contact_list
