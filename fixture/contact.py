@@ -18,8 +18,7 @@ class ContactHelper:
         wd = self.app.wd
         # fill contact form
         self.change_field_value('firstname', contact.firstname)
-        self.change_field_value('group_header', contact.header)
-        self.change_field_value('group_footer', contact.footer)
+        # ToDo - ?: add filds filling for whole instance.
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
