@@ -17,7 +17,7 @@ class ContactHelper:
         self.open_add_new_contact_page()
         self.fill_contact_form(contact)
         wd.find_element_by_name('submit').click()
-        self.return_to_home_page()
+        self.go_to_home_page()
 
     def fill_contact_form(self, contact):
         wd = self.app.wd
@@ -34,11 +34,12 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
+        self.go_to_home_page()
         self.select_first_contact()
         # submit deletion
-        wd.find_element_by_xpath('//input[@value="Delete"]').click()
+        wd.find_element_by_xpath('//div/input[@value="Delete"]').click()
         self.accept_if_alert_present()
-        self.return_to_home_page()
+        self.go_to_home_page()
 
     def accept_if_alert_present(self):
         wd = self.app.wd
@@ -57,7 +58,7 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_name('selected[]').click()
 
-    def return_to_home_page(self):
+    def go_to_home_page(self):
         wd = self.app.wd
         try:
             wd.find_element_by_link_text('home page').click()
@@ -66,6 +67,7 @@ class ContactHelper:
 
     def modify_first_contact(self, new_contact_data):
         wd = self.app.wd
+        self.go_to_home_page()
         self.select_first_contact()
         # open modification form
         wd.find_element_by_xpath('//a[@href="edit.php?id=13"]').click()
@@ -73,7 +75,7 @@ class ContactHelper:
         self.fill_contact_form(new_contact_data)
         # submit modification
         wd.find_element_by_name('update').click()
-        self.return_to_home_page()
+        self.go_to_home_page()
 
     def count(self):
         wd = self.app.wd
