@@ -4,6 +4,7 @@ from model.group import Group
 
 
 class GroupHelper:
+    group_cache = None
 
     def __init__(self, app):
         self.app = app
@@ -39,8 +40,12 @@ class GroupHelper:
 
     def delete_first_group(self):
         wd = self.app.wd
+        self.delete_group_by_index(0)
+
+    def delete_group_by_index(self, index):
+        wd = self.app.wd
         self.open_group_page()
-        self.select_first_group()
+        self.select_group_by_index(index)
         # submit deletion
         wd.find_element_by_name('delete').click()
         self.return_to_group_page()
@@ -49,6 +54,10 @@ class GroupHelper:
     def select_first_group(self):
         wd = self.app.wd
         wd.find_element_by_name('selected[]').click()
+
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name('selected[]')[index].click()
 
     def return_to_group_page(self):
         wd = self.app.wd
@@ -59,8 +68,12 @@ class GroupHelper:
 
     def modify_first_group(self, new_group_data):
         wd = self.app.wd
+        self.modify_group_by_index(0)
+
+    def modify_group_by_index(self, index, new_group_data):
+        wd = self.app.wd
         self.open_group_page()
-        self.select_first_group()
+        self.select_group_by_index(index)
         # open modification form
         wd.find_element_by_name('edit').click()
         # fill group form
@@ -75,8 +88,6 @@ class GroupHelper:
         self.open_group_page()
         return len(wd.find_elements_by_name('selected[]'))
 
-    group_cache = None
-
     def get_group_list(self):
         if self.group_cache is None:
             wd = self.app.wd
@@ -86,5 +97,4 @@ class GroupHelper:
                 str_text = element.text
                 str_id = element.find_element_by_name('selected[]').get_attribute('value')
                 self.group_cache.append(Group(name=str_text, id=str_id))
-
         return list(self.group_cache)
