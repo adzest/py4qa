@@ -1,10 +1,3 @@
 [
-  "test_add_contact.py::test_add_contact",
-  "test_add_contact.py::test_add_empty_contact",
-  "test_add_group.py::test_add_group",
-  "test_add_group.py::test_add_empty_group",
-  "test_del_contact.py::test_add_contact",
-  "test_del_group.py::test_add_group",
-  "test_modify_contact.py::test_modify_contact_name",
-  "test_modify_group.py::test_modify_group_name"
+  "test_add_group.py::test_add_group"
 ]
