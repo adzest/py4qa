@@ -105,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -463,12 +463,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_for_test_phones_test_phones_on_home_page - 2018.04.10 at 14h 07m 38s.xml">
-      <configuration name="py.test for test_phones.test_phones_on_home_page" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_for_test_phones_test_phones_on_home_page - 2018.04.10 at 14h 17m 08s.xml">
-      <configuration name="py.test for test_phones.test_phones_on_home_page" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_for_test_phones_test_phones_on_home_page - 2018.04.10 at 14h 54m 00s.xml">
       <configuration name="py.test for test_phones.test_phones_on_home_page" configurationId="tests" />
     </history-entry>
@@ -493,9 +487,15 @@
     <history-entry file="py_test_for_test_phones_test_phones_on_home_page - 2018.04.10 at 20h 59m 42s.xml">
       <configuration name="py.test for test_phones.test_phones_on_home_page" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_for_test_phones_test_phones_on_home_page - 2018.04.10 at 21h 04m 52s.xml">
+      <configuration name="py.test for test_phones.test_phones_on_home_page" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_phones_test_phones_on_home_page - 2018.04.10 at 21h 05m 04s.xml">
+      <configuration name="py.test for test_phones.test_phones_on_home_page" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3402778" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
