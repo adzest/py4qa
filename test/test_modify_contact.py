@@ -7,7 +7,7 @@ def test_modify_contact_name(app):
         app.contact.create(Contact(firstname='name_mod_new'))
     old_contacts = app.contact.get_contact_list()
     int_index = randrange(len(old_contacts))
-    contact = Contact(firstname='first_name_modified')
+    contact = Contact(firstname='first_name_modified', lastname='')
     contact.id = old_contacts[int_index].id
     app.contact.modify_contact_by_index(int_index, contact)
     new_contacts = app.contact.get_contact_list()
