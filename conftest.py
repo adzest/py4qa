@@ -1,5 +1,6 @@
 import json
 import os.path
+
 import pytest
 
 __author__ = 'oleksi.isakov'
@@ -8,6 +9,7 @@ from fixture.application import Application
 
 fixture = None
 target = None
+
 
 @pytest.fixture
 def app(request):
@@ -38,4 +40,15 @@ def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='firefox')
     parser.addoption('--target', action='store', default='target.json')
 
-    pass
+
+def pytest_configure(config):
+    terminal = config.pluginmanager.getplugin('terminal')
+    BaseReporter = terminal.TerminalReporter
+
+    class QuietReporter(BaseReporter):
+        def __init__(self, *args, **kwargs):
+            BaseReporter.__init__(self, *args, **kwargs)
+            self.verbosity = 0
+            self.showlongtestinfo = self.showfspath = False
+
+    terminal.TerminalReporter = QuietReporter

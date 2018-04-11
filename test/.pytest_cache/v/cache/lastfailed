@@ -1,12 +1,4 @@
 {
-  "test_add_contact.py::test_add_contact": true,
-  "test_add_group.py::test_add_group[id=None| name=name )|_'\\<EEH| header=headervXJW<QObm O9 | footer=]": true,
-  "test_add_group.py::test_add_group[id=None| name=name )|_'\\<EEH| header=headervXJW<QObm O9 | footer=footer mw<P8mN[]": true,
-  "test_add_group.py::test_add_group[id=None| name=name )|_'\\<EEH| header=| footer=]": true,
-  "test_add_group.py::test_add_group[id=None| name=name )|_'\\<EEH| header=| footer=footerc6,?!]": true,
-  "test_add_group.py::test_add_group[id=None| name=namelRb-iQ  C)F| header=header$s.O}| footer=]": true,
-  "test_add_group.py::test_add_group[id=None| name=namelRb-iQ  C)F| header=header$s.O}| footer=footer<m]": true,
-  "test_add_group.py::test_add_group[id=None| name=namelRb-iQ  C)F| header=| footer=]": true,
-  "test_add_group.py::test_add_group[id=None| name=namelRb-iQ  C)F| header=| footer=footerj{_ o.]": true,
-  "test_del_group.py::test_delete_random_group": true
+  "test_add_contact.py::test_add_contact[id=None| name=f_n| lastname=l_n]": true, 
+  "test_add_group.py::test_add_group[id=None| name=name$0 t y2\"A\"pMK| header=headern  [b,,7SXW| footer=footer'P>o]": true
 }

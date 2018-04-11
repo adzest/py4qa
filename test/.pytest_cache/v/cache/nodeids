@@ -1,3 +1,4 @@
 [
-  "test_del_group.py::test_delete_random_group"
+  "test_add_contact.py::test_add_contact[id=None| firstname=f_n| lastname=l_n]", 
+  "test_add_contact.py::test_add_contact[id=None| firstname=| lastname=]"
 ]

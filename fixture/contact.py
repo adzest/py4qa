@@ -28,7 +28,20 @@ class ContactHelper:
     def fill_contact_form(self, contact):
         wd = self.app.wd
         # fill contact form
-        self.change_field_value('firstname', contact.firstname)
+        if contact.firstname is not None:
+            self.change_field_value('firstname', contact.firstname)
+        if  contact.middlename is not None:
+            self.change_field_value('middlename', contact.middlename)
+        if contact.lastname is not None:
+            self.change_field_value('lastname', contact.lastname)
+        if contact.homephone is not None:
+           self.change_field_value('home', contact.homephone)
+        if contact.mobilephone is not None:
+            self.change_field_value('mobile', contact.mobilephone)
+        if contact.workphone is not None:
+            self.change_field_value('work', contact.workphone)
+        if contact.phone2 is not None:
+            self.change_field_value('phone2', contact.phone2)
         # ToDo - ?: add fields filling for whole instance.
 
     def change_field_value(self, field_name, text):
@@ -105,7 +118,6 @@ class ContactHelper:
             wd = self.app.wd
             self.go_to_home_page()
             self.contact_cache = []
-            print(self.contact_cache)
             for row in wd.find_elements_by_name('entry'):
                 cells = row.find_elements_by_tag_name('td')
                 firstname = cells[2].text

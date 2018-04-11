@@ -42,7 +42,7 @@ class Contact:
         self.all_phones_from_view_page = all_phones_from_view_page
 
     def __repr__(self):
-        return 'id=%s| name=%s| lastname=%s' % (self.id, self.firstname, self.lastname)
+        return 'id=%s| firstname=%s| lastname=%s' % (self.id, self.firstname, self.lastname)
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id) \
