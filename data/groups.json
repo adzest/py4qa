@@ -1,50 +1,44 @@
 [
   {
-    "id": null, 
-    "header": "", 
-    "name": "", 
+    "name": "",
+    "id": null,
+    "header": "",
+    "py/object": "model.group.Group",
     "footer": ""
-  }, 
+  },
   {
-    "id": null, 
-    "header": "", 
-    "name": "", 
-    "footer": "footer908Jp m|m< h\"sz"
-  }, 
+    "name": "name{-  kz!",
+    "id": null,
+    "header": "headerRaZ0F< E",
+    "py/object": "model.group.Group",
+    "footer": "footer%"
+  },
   {
-    "id": null, 
-    "header": "header/8&", 
-    "name": "", 
-    "footer": ""
-  }, 
+    "name": "name",
+    "id": null,
+    "header": "headerXUZRm$V ",
+    "py/object": "model.group.Group",
+    "footer": "footer,$,E"
+  },
   {
-    "id": null, 
-    "header": "header/8&", 
-    "name": "", 
-    "footer": "footerx{%86G5$3z9H 4[$=L"
-  }, 
+    "name": "nameHs ",
+    "id": null,
+    "header": "headerz&gid!iY ",
+    "py/object": "model.group.Group",
+    "footer": "footer *!b .*"
+  },
   {
-    "id": null, 
-    "header": "", 
-    "name": "name#  ", 
-    "footer": ""
-  }, 
+    "name": "name",
+    "id": null,
+    "header": "headerJ_",
+    "py/object": "model.group.Group",
+    "footer": "footerT"
+  },
   {
-    "id": null, 
-    "header": "", 
-    "name": "name#  ", 
-    "footer": "footerHvN@FW"
-  }, 
-  {
-    "id": null, 
-    "header": "header2 ]pw^[Xsv{ ,ULs]5(", 
-    "name": "name#  ", 
-    "footer": ""
-  }, 
-  {
-    "id": null, 
-    "header": "header2 ]pw^[Xsv{ ,ULs]5(", 
-    "name": "name#  ", 
-    "footer": "footer O6 3d 8; Ws*j?5H76"
+    "name": "name=5 )9",
+    "id": null,
+    "header": "headerGITgQ:gy",
+    "py/object": "model.group.Group",
+    "footer": "footer"
   }
 ]

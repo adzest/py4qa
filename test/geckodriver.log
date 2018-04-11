@@ -604,3 +604,15 @@ Unable to read VR Path Registry from C:\Users\alexey.isakov\AppData\Local\openvr
 1523443401808	Marionette	INFO	Listening on port 63213
 1523443402526	Marionette	WARN	TLS certificate errors will be ignored for this session
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1523459412278	geckodriver	INFO	geckodriver 0.19.0
+1523459412285	geckodriver	INFO	Listening on 127.0.0.1:62931
+1523459415316	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ALEXEY~1.ISA\\AppData\\Local\\Temp\\rust_mozprofile.r3XNOKZWsmVX"
+1523459415956	Marionette	INFO	Enabled via --marionette
+1523459417458	Marionette	INFO	Listening on port 62970
+1523459418434	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\alexey.isakov\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 10092, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2C00CB,name=PContent::Msg_GraphicsError) Channel error: cannot send/recv
+
+[GFX1-]: Rec
