@@ -1,6 +1,9 @@
 # Buty-cmpiled / optimized / DLL files
 __pycache__/
+.pytest_cache/
+.idea/
 *.py[cod]
+*.pyc
 
 # C extensions
 *.so
@@ -29,22 +32,4 @@ var/
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
-# Pycharm
-.idea/
-
-.idea/py4qa.iml
-.idea/workspace.xml
-.idea/py4qa.iml
-.idea/workspace.xml
-.idea/workspace.xml
-.idea/workspace.xml
-.idea/workspace.xml
-test/geckodriver.log
-test/geckodriver.log
-test/geckodriver.log
-test/geckodriver.log
-test/.pytest_cache/v/cache/nodeids
-.idea/workspace.xml
-test/geckodriver.log
-test/.pytest_cache/v/cache/nodeids
+geckodriver.log
