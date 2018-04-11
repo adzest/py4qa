@@ -105,16 +105,15 @@ class ContactHelper:
             wd = self.app.wd
             self.go_to_home_page()
             self.contact_cache = []
-            print self.contact_cache
+            print(self.contact_cache)
             for row in wd.find_elements_by_name('entry'):
                 cells = row.find_elements_by_tag_name('td')
                 firstname = cells[2].text
                 lastname = cells[1].text
                 id = cells[0].find_element_by_tag_name('input').get_attribute('value')
-                all_phones = cells[5].text.splitlines()
+                all_phones = cells[5].text
                 self.contact_cache.append(
-                    Contact(firstname=firstname, lastname=lastname, id=id, homephone=all_phones[0],
-                            mobilephone=all_phones[1], workphone=all_phones[2], phone2=all_phones[3]))
+                    Contact(firstname=firstname, lastname=lastname, id=id, all_phones_from_home_page=all_phones))
         return list(self.contact_cache)
 
     def open_contact_edit_by_index(self, index):
@@ -147,10 +146,21 @@ class ContactHelper:
     def get_contact_from_view_page(self, index):
         wd = self.app.wd
         self.open_contact_view_by_index(index)
-        text = wd.find_element_by_id('content').text
-        homephone = re.search("H: (.*)", text).group(1)
-        mobilephone = re.search("M: (.*)", text).group(1)
-        workphone = re.search("W: (.*)", text).group(1)
-        phone2 = re.search("P: (.*)", text).group(1)
-        return Contact(homephone=homephone, workphone=workphone,
-                       mobilephone=mobilephone, phone2=phone2)
+        content = wd.find_element_by_id('content').text
+        if self.phones_are_present(content):
+            all_phones = content.splitlines(content)[1]
+        else:
+            all_phones = None
+        # homephone = re.search("H: (.*)", text).group(1)
+        # mobilephone = re.search("M: (.*)", text).group(1)
+        # workphone = re.search("W: (.*)", text).group(1)
+        # phone2 = re.search("P: (.*)", text).group(1)
+        return Contact(all_phones_from_view_page=all_phones)
+
+    def phones_are_present(self, content):
+        blocks = content.splitlines()
+        print(blocks[1])
+        if blocks[1] != u'':
+            return True
+        else:
+            False
