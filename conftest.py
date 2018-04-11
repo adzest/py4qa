@@ -1,5 +1,6 @@
 import json
 import os.path
+import importlib
 
 import pytest
 
@@ -41,6 +42,16 @@ def pytest_addoption(parser):
     parser.addoption('--target', action='store', default='target.json')
 
 
+def pytest_generate_tests(metafunc):
+    for fixture in metafunc.fixturenames:
+        if fixture.startswith("data_"):
+            testdata = load_from_module(fixture[5:])
+            metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
+
+def load_from_module(module):
+    return importlib.import_module("data.%s" % module).testdata
+
+# -------------------- From stackoverflow -----------------
 def pytest_configure(config):
     terminal = config.pluginmanager.getplugin('terminal')
     BaseReporter = terminal.TerminalReporter

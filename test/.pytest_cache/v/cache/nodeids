@@ -1,4 +1,4 @@
 [
-  "test_add_contact.py::test_add_contact[id=None| firstname=f_n| lastname=l_n]", 
-  "test_add_contact.py::test_add_contact[id=None| firstname=| lastname=]"
+  "test_add_group.py::test_add_group[id=None| name=name1| header=header1| footer=footer1]", 
+  "test_add_group.py::test_add_group[id=None| name=| header=| footer=]"
 ]
