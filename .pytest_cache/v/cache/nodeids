@@ -1,3 +1,8 @@
 [
-  "test/test_del_group.py::test_delete_random_group"
+  "test/test_add_group.py::test_add_group[id=None| name=| header=| footer=]",
+  "test/test_add_group.py::test_add_group[id=None| name=name{-  kz!| header=headerRaZ0F< E| footer=footer%]",
+  "test/test_add_group.py::test_add_group[id=None| name=name| header=headerXUZRm$V | footer=footer,$,E]",
+  "test/test_add_group.py::test_add_group[id=None| name=nameHs | header=headerz&gid!iY | footer=footer *!b .*]",
+  "test/test_add_group.py::test_add_group[id=None| name=name| header=headerJ_| footer=footerT]",
+  "test/test_add_group.py::test_add_group[id=None| name=name=5 )9| header=headerGITgQ:gy| footer=footer]"
 ]

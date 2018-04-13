@@ -1,0 +1,120 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1523517910162" stop="1523517930273">
+  <name>test.test_add_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1523517910162" status="passed" stop="1523517919642">
+      <name>test_add_group[id=None| name=| header=| footer=]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10260-MainThread"/>
+        <label name="host" value="alexeyisakov"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1523517919644" status="failed" stop="1523517921571">
+      <name>test_add_group[id=None| name=name{-  kz!| header=headerRaZ0F&lt; E| footer=footer%]</name>
+      <failure>
+        <message>AssertionError: assert [id=58| name=...ter=None, ...] == [id=58| name=n...ter=None, ...]
+  At index 32 diff: id=None| name=name{-  kz!| header=headerRaZ0F&lt; E| footer=footer% != id=111| name=name{- kz!| header=None| footer=None
+  Use -v to get the full diff</message>
+        <stack-trace>app = &lt;fixture.application.Application object at 0x0000000003E3C7F0&gt;
+json_groups = id=None| name=name{-  kz!| header=headerRaZ0F&lt; E| footer=footer%
+
+    def test_add_group(app, json_groups):
+        group = json_groups
+        old_groups = app.group.get_group_list()
+        app.group.create(group)
+        assert len(old_groups) + 1 == app.group.count()
+        new_groups = app.group.get_group_list()
+        old_groups.append(group)
+&gt;       assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
+E       assert [id=58| name=...ter=None, ...] == [id=58| name=n...ter=None, ...]
+E         At index 32 diff: id=None| name=name{-  kz!| header=headerRaZ0F&lt; E| footer=footer% != id=111| name=name{- kz!| header=None| footer=None
+E         Use -v to get the full diff
+
+test\test_add_group.py:15: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10260-MainThread"/>
+        <label name="host" value="alexeyisakov"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1523517921575" status="passed" stop="1523517923812">
+      <name>test_add_group[id=None| name=name| header=headerXUZRm$V | footer=footer,$,E]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10260-MainThread"/>
+        <label name="host" value="alexeyisakov"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1523517923823" status="failed" stop="1523517925978">
+      <name>test_add_group[id=None| name=nameHs | header=headerz&amp;gid!iY | footer=footer *!b .*]</name>
+      <failure>
+        <message>AssertionError: assert [id=58| name=...ter=None, ...] == [id=58| name=n...ter=None, ...]
+  At index 34 diff: id=None| name=nameHs | header=headerz&amp;gid!iY | footer=footer *!b .* != id=113| name=nameHs| header=None| footer=None
+  Use -v to get the full diff</message>
+        <stack-trace>app = &lt;fixture.application.Application object at 0x0000000003E3C7F0&gt;
+json_groups = id=None| name=nameHs | header=headerz&amp;gid!iY | footer=footer *!b .*
+
+    def test_add_group(app, json_groups):
+        group = json_groups
+        old_groups = app.group.get_group_list()
+        app.group.create(group)
+        assert len(old_groups) + 1 == app.group.count()
+        new_groups = app.group.get_group_list()
+        old_groups.append(group)
+&gt;       assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
+E       assert [id=58| name=...ter=None, ...] == [id=58| name=n...ter=None, ...]
+E         At index 34 diff: id=None| name=nameHs | header=headerz&amp;gid!iY | footer=footer *!b .* != id=113| name=nameHs| header=None| footer=None
+E         Use -v to get the full diff
+
+test\test_add_group.py:15: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10260-MainThread"/>
+        <label name="host" value="alexeyisakov"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1523517925981" status="passed" stop="1523517928175">
+      <name>test_add_group[id=None| name=name| header=headerJ_| footer=footerT]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10260-MainThread"/>
+        <label name="host" value="alexeyisakov"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1523517928178" status="passed" stop="1523517930273">
+      <name>test_add_group[id=None| name=name=5 )9| header=headerGITgQ:gy| footer=footer]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10260-MainThread"/>
+        <label name="host" value="alexeyisakov"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
